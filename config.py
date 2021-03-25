@@ -3,9 +3,10 @@ from src import util
 
 experiment = 1
 
-path_training = 'data/football/events.csv'
+path_training = 'data/train.txt'
+path_testing = 'data/test.txt'
+
 path_output = 'experiments/e1'
-path_testing = 'data/test'
 path_log = 'log'
 
 model_param = {
@@ -13,6 +14,11 @@ model_param = {
     'max_subword': 1,
     'batch_size': 1024,
     'learning_rate' : 10e-4,
+    'window_size' :  3,
+    'epochs' : 20000,
+    'valid_size' : 16,     # Random set of words to evaluate similarity on.
+    'valid_window' : 100,  # Only pick dev samples in the head of the distribution.
+    'vocab_size': 5000
 
 }
 
