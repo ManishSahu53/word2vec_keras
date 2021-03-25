@@ -1,0 +1,6 @@
+tensorflow
+keras
+joblib
+json
+numpy
+opencv-python
